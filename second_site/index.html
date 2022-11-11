@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <!-- АДАПТИВ 1) ПЕРВОЕ ЧТО МЫ ПИШЕМ САЙТ БУДЕТ ПРИНИМАТЬ ШИРИНУ ДЕВАЙСА НА КОТОРОМ ОН БУДЕТ ОТКРЫТ with=device-with И НЕ БУДЕТ ЗУМА initial-scale=1 БУДЕТ СТАНДАРТНОЕ УВЕЛИЧЕНИЕ САЙТА -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300i,400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 1) Добавляем шрифты сайта по макету с сайта Googlefonts -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Стили слайдера -->
+    <script
+      src="https://kit.fontawesome.com/14720f2bb4.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Подключили иконки с сайта -->
+    <title>Second Site</title>
+  </head>
+  <body>
+    <!-- ПЕРВЫЙ УРОК -->
+    <!-- Header -->
+    <header class="header" id="header">
+      <!-- id="header" для JS -->
+      <!-- ДЛЯ ОТОБРАЖЕНИЯ МЕНЮ ПРИ СКРОЛЕ МОДИФИКАТОР -->
+      <!-- 10) Для меню создали отдельный блок -->
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-logo" data-scroll="#intro">MoGo</div>
+          <!-- data-scroll="#intro" при клике на логотив скрол на верх страницы -->
+          <!-- 12) Будет 2 элемента, логотип и меню nav -->
+          <nav class="nav" id="nav">
+            <a class="nav__link" href="#" data-scroll="#about">About</a>
+            <!-- data-scroll="#about" к какому бюлоку страницы мы будем скролить и у блока about надо теперь сделать id и в js при клике по этой кнопке будем плавно переключаться на нужный блок -->
+            <a class="nav__link" href="#" data-scroll="#service">Service</a>
+            <a class="nav__link" href="#" data-scroll="#blog">Blog</a>
+            <a class="nav__link" href="#" data-scroll="#work">Work</a>
+            <a class="nav__link" href="#" data-scroll="#footer">Contack</a>
+            <a class="nav__link" href="#"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+            <a class="nav__link" href="#"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></a>
+          </nav>
+
+          <button class="nav-toggle" id="nav-toggle" type="button">
+            <!-- ДЛЯ Бургер меню -->
+            <span class="nav-toggle-item">Menu</span>
+          </button>
+        </div>
+        <!-- header-inner -->
+        <!-- 11) Внутрення часть хедора -->
+      </div>
+      <!-- container -->
+    </header>
+
+    <!-- Page для адаптива -->
+    <!-- Intro -->
+    <div class="page">
+      <div class="intro" id="intro">
+        <!-- id="intro Для JS надо будет измерить его высоту-->
+        <!-- 6) Делаем блок для нашего верха -->
+        <div class="container">
+          <!-- 5) Для всего макета делаем контейнер -->
+          <div class="intro-inner">
+            <!-- 32) Для того чтобы назначить размеры нашему заголовку так как он до этого был по всей ширине контента -->
+            <h2 class="intro-suptitle">Creative Template</h2>
+            <!-- 34) Делаем второй заголовок который над главным -->
+            <h1 class="intro-title">Welcome to MoGo</h1>
+            <!-- 30) Добавили наш главный заголовок -->
+
+            <a class="btn" href="#">Learn More</a>
+            <!-- 38) Делаем кнопку -->
+          </div>
+          <!-- intro-inner -->
+        </div>
+        <!-- container -->
+
+        <!-- 43) Делаем нижнюю часть меню в блоке -->
+        <div class="slider">
+          <div class="container">
+            <div class="slider-inner">
+              <div class="slider-item active">
+                <span class="slider-num">01</span>
+                <span class="slider-text">Intro</span>
+                <!-- ДЛЯ АДАПТИВА ОБЕРНУЛИ В СПАН ЧТОБЫ МОЖНО БЫЛО ОБРАТИТЬСЯ С КЛАССОМ -->
+              </div>
+              <div class="slider-item">
+                <span class="slider-num">02</span>
+                <span class="slider-text">Work</span>
+              </div>
+              <div class="slider-item">
+                <span class="slider-num">03</span>
+                <span class="slider-text">About</span>
+              </div>
+              <div class="slider-item">
+                <span class="slider-num">04</span>
+                <span class="slider-text">Contacts</span>
+              </div>
+            </div>
+          </div>
+          <!-- container -->
+        </div>
+        <!-- slider -->
+      </div>
+      <!-- intro -->
+
+      <!-- ====================================================================================== -->
+
+      <!-- 45) ВТОРОЙ УРОК НОВЫЙ БЛОК!!!! -->
+
+      <section class="section" id="about">
+        <!-- id="about" для скрола к нему через меню -->
+        <div class="container">
+          <div class="section-header">
+            <!-- 46) Создали для одинаковых заголовках блок -->
+            <h3 class="section-suptitle">What we do</h3>
+            <h2 class="section-title">Story about us</h2>
+            <div class="section-text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <!-- section-header -->
+
+          <!-- 54) Блок с картинками -->
+
+          <div class="card">
+            <div class="card-item">
+              <div class="card-inner">
+                <div class="card-img">
+                  <img src="img/about/1.jpg" alt="" />
+                </div>
+                <div class="card-text">super team</div>
+              </div>
+            </div>
+            <div class="card-item">
+              <div class="card-inner">
+                <div class="card-img">
+                  <img src="img/about/2.jpg" alt="" />
+                </div>
+                <div class="card-text">super team</div>
+              </div>
+            </div>
+            <div class="card-item">
+              <div class="card-inner">
+                <div class="card-img">
+                  <img src="img/about/3.jpg" alt="" />
+                </div>
+                <div class="card-text">super team</div>
+              </div>
+            </div>
+          </div>
+          <!-- about(сard) Сделали имя другое чтобы обозначить одинаковые блоки -->
+        </div>
+        <!-- container -->
+      </section>
+
+      <!-- БЛОК с инфой ниже картинки -->
+      <div class="statistics">
+        <div class="container">
+          <div class="stat">
+            <div class="stat-item">
+              <div class="stat-count">42</div>
+              <div class="stat-text">Web Design Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-count">123</div>
+              <div class="stat-text">happy client</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-count">15</div>
+              <div class="stat-text">award winner</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-count">99</div>
+              <div class="stat-text">cup of coffee</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-count">24</div>
+              <div class="stat-text">members</div>
+            </div>
+          </div>
+          <!-- stat -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- statistics -->
+
+      <!-- ====================================================================================== -->
+
+      <!-- ТРЕТИЙ УРОК -->
+
+      <section class="section" id="service">
+        <div class="container">
+          <div class="section-header">
+            <!-- (СКОПИРОВАЛИ БЛОК ПОВТОРЯЮЩИЙСЯ) Создали для одинаковых заголовков блок -->
+            <h3 class="section-suptitle">We work with</h3>
+            <h2 class="section-title">Amazing Services</h2>
+          </div>
+          <!-- Блок для иконок -->
+          <div class="services">
+            <div class="services-item services-item--border">
+              <!-- Модификатор чтобы прописать для них бордер -->
+              <img class="services-icon" src="img/section/1.jpg" alt="" />
+              <div class="services-title">Photography</div>
+              <div class="services-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor.
+              </div>
+            </div>
+            <div class="services-item services-item--border">
+              <img class="services-icon" src="img/section/2.jpg" alt="" />
+              <div class="services-title">Web Design</div>
+              <div class="services-text">
+                Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor.
+              </div>
+            </div>
+            <div class="services-item services-item--border">
+              <img class="services-icon" src="img/section/3.jpg" alt="" />
+              <div class="services-title">Creativity</div>
+              <div class="services-text">
+                Dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor.
+              </div>
+            </div>
+            <div class="services-item">
+              <img class="services-icon" src="img/section/4.jpg" alt="" />
+              <div class="services-title">seo</div>
+              <div class="services-text">
+                Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod.
+              </div>
+            </div>
+            <div class="services-item">
+              <img class="services-icon" src="img/section/5.jpg" alt="" />
+              <div class="services-title">Css/Html</div>
+              <div class="services-text">
+                Lorem dolor sit amet, consectetur adipiscing elit, sed do
+                tempor.
+              </div>
+            </div>
+            <div class="services-item">
+              <img class="services-icon" src="img/section/6.jpg" alt="" />
+              <div class="services-title">digital</div>
+              <div class="services-text">
+                Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              </div>
+            </div>
+          </div>
+          <!-- services -->
+        </div>
+      </section>
+
+      <!-- СЛЕДУЮЩИЙ БЛОК -->
+
+      <section class="section section--devices">
+        <!-- section--devices модификатор для фона -->
+        <div class="container">
+          <div class="section-header">
+            <!-- (СКОПИРОВАЛИ БЛОК ПОВТОРЯЮЩИЙСЯ) Создали для одинаковых заголовках блок -->
+            <h3 class="section-suptitle">For all devices</h3>
+            <h2 class="section-title">Unique design</h2>
+          </div>
+
+          <div class="devices">
+            <img class="devices-item" src="img/1.png" alt="" />
+            <img
+              class="devices-item devices-item--iphone"
+              src="img/2.png"
+              alt=""
+            />
+          </div>
+          <!-- devices -->
+        </div>
+      </section>
+
+      <!-- ЧЕТВЕРТЫЙ УРОК -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <!-- (СКОПИРОВАЛИ БЛОК ПОВТОРЯЮЩИЙСЯ) Создали для одинаковых заголовках блок -->
+            <h3 class="section-suptitle">Service</h3>
+            <h2 class="section-title">what we do</h2>
+            <div class="services-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+          <!-- section-header -->
+
+          <div class="wedo">
+            <div class="wedo-item">
+              <img class="wedo-img" src="img/photo4.jpg" alt="" />
+            </div>
+            <div class="wedo-item">
+              <div class="accordion">
+                <div class="accordion-item" data-collapse="#wedo-1">
+                  <div class="accordion-header">
+                    <!-- data-collapse="#wedo-1" при клики на шапку открываем айди контента -->
+                    <img
+                      class="accordion-icon"
+                      src="img/section/1.jpg"
+                      alt=""
+                    />
+                    <div class="accordion-title">Photography</div>
+                  </div>
+                  <div class="accordion-content" id="wedo-1">
+                    <!-- data-collapse="#wedo-1" при клики на шапку открываем айди контента -->
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="accordion">
+                  <div class="accordion-item active" data-collapse="#wedo-2">
+                    <div class="accordion-header">
+                      <img
+                        class="accordion-icon"
+                        src="img/section/1.jpg"
+                        alt=""
+                      />
+                      <div class="accordion-title">Photography</div>
+                    </div>
+                    <div class="accordion-content" id="wedo-2">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item" data-collapse="#wedo-3">
+                    <div class="accordion-header">
+                      <img
+                        class="accordion-icon"
+                        src="img/section/1.jpg"
+                        alt=""
+                      />
+                      <div class="accordion-title">Photography</div>
+                    </div>
+                    <div class="accordion-content" id="wedo-3">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- accordion -->
+              </div>
+              <!-- accordion -->
+            </div>
+            <!-- wedo-item -->
+          </div>
+          <!-- wedo -->
+        </div>
+        <!-- container -->
+      </section>
+
+      <div class="section section--gray">
+        <!-- СЛедующий блок с модификатором gray -->
+        <div class="container">
+          <div class="reviews">
+            <div data-slider>
+              <div>
+                <!-- Стрелки -->
+                <div class="reviews-item">
+                  <img class="reviews-photo" src="img/avatar.jpg" alt="" />
+                  <div class="reviews-text">
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                  </div>
+                  <div class="reviews-author">Jon Doe</div>
+                </div>
+              </div>
+              <div>
+                <div class="reviews-item">
+                  <img class="reviews-photo" src="img/avatar.jpg" alt="" />
+                  <div class="reviews-text">
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                  </div>
+                  <div class="reviews-author">Jon Doe</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================================= -->
+
+      <!-- Урок №5 -->
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <!-- (СКОПИРОВАЛИ БЛОК ПОВТОРЯЮЩИЙСЯ) Создали для одинаковых заголовках блок -->
+            <h3 class="section-suptitle">Who we are</h3>
+            <h2 class="section-title">Meet our team</h2>
+            <div class="services-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+          <!-- section-header -->
+
+          <div class="card">
+            <div class="card-item">
+              <div class="card-inner">
+                <div class="card-img">
+                  <img src="img/OurTeam/1.jpg" alt="" />
+                </div>
+                <div class="card-text">
+                  <div class="social">
+                    <!-- для иконок сделали блок -->
+                    <a class="social-item" href="#" target="_blank">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a class="social-item" href="#" target="_blank">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a class="social-item" href="#" target="_blank">
+                      <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                    <a class="social-item" href="#" target="_blank">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </div>
+                  <!-- social -->
+                </div>
+                <!-- card-text -->
+              </div>
+              <!-- card-inner -->
+              <div class="card-info">
+                <!-- Блок для заголовков под картинкой -->
+                <div class="card-name">Matthew Dix</div>
+                <div class="card-prof">Graphic Design</div>
+              </div>
+              <!-- card-info -->
+            </div>
+            <div class="card-item">
+              <div class="card-inner">
+                <div class="card-img">
+                  <img src="img/OurTeam/2.jpg" alt="" />
+                </div>
+                <div class="card-text">
+                  <div class="social">
+                    <!-- для иконок сделали блок -->
+                    <a class="social-item" href="#" target="_blank">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a class="social-item" href="#" target="_blank">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a class="social-item" href="#" target="_blank">
+                      <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                    <a class="social-item" href="#" target="_blank">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </div>
+                  <!-- social -->
+                </div>
+                <!-- card-text -->
+              </div>
+              <!-- card-inner -->
+              <div class="card-info">
+                <!-- Блок для заголовков под картинкой -->
+                <div class="card-name">Christopher Campbell</div>
+                <div class="card-prof">Branding/UX design</div>
+              </div>
+              <!-- card-info -->
+            </div>
+            <div class="card-item">
+              <div class="card-inner">
+                <div class="card-img">
+                  <img src="img/OurTeam/3.jpg" alt="" />
+                </div>
+                <div class="card-text">
+                  <div class="social">
+                    <!-- для иконок сделали блок -->
+                    <a class="social-item" href="#" target="_blank">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a class="social-item" href="#" target="_blank">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a class="social-item" href="#" target="_blank">
+                      <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                    <a class="social-item" href="#" target="_blank">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </div>
+                  <!-- social -->
+                </div>
+              </div>
+              <!-- card-item -->
+              <div class="card-info">
+                <!-- Блок для заголовков под картинкой -->
+                <div class="card-name">Michael Fertig</div>
+                <div class="card-prof">Developer</div>
+              </div>
+              <!-- card-info -->
+            </div>
+            <!-- card-inner -->
+          </div>
+          <!-- about(card) сделали так как блоки похожи чтобы их выделить в отдельную группу -->
+        </div>
+        <!-- container -->
+      </section>
+
+      <!-- СЛЕДУЮЩИЙ БЛОК ПОД КАРТИНКАМИ И ЗАГОЛОВКАМИ КОМАНДЫ -->
+
+      <div class="section section--gray">
+        <!-- Модификатор section--gray красит фон в серый цвет -->
+        <div class="container">
+          <div class="logos">
+            <div class="logos-item">
+              <img class="logos-img" src="img/share/1.jpg" alt="" />
+            </div>
+            <div class="logos-item">
+              <img class="logos-img" src="img/share/2.jpg" alt="" />
+            </div>
+            <div class="logos-item">
+              <img class="logos-img" src="img/share/3.jpg" alt="" />
+            </div>
+            <div class="logos-item">
+              <img class="logos-img" src="img/share/4.jpg" alt="" />
+            </div>
+            <div class="logos-item">
+              <img class="logos-img" src="img/share/5.jpg" alt="" />
+            </div>
+            <div class="logos-item">
+              <img class="logos-img" src="img/share/6.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- container -->
+      </div>
+      <!-- section section--gray -->
+
+      <!-- =================================================================== -->
+
+      <!-- 6 УРОК -->
+
+      <section class="section" id="work">
+        <div class="container">
+          <div class="section-header">
+            <!-- (СКОПИРОВАЛИ БЛОК ПОВТОРЯЮЩИЙСЯ) Создали для одинаковых заголовках блок -->
+            <h3 class="section-suptitle">What we do</h3>
+            <h2 class="section-title">some of our work</h2>
+            <div class="services-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+          <!-- section-header -->
+        </div>
+        <!-- container -->
+
+        <div class="works">
+          <!-- Блок для наших фото и он не в рамках контейнера поэтому его вынесли -->
+          <div class="works-col">
+            <div class="works-item">
+              <img class="works-image" src="img/works/1.jpg" alt="" />
+              <div class="works-info">
+                <div class="works-title">creatively designed</div>
+                <div class="works-text">Lorem ipsum dolor sit</div>
+              </div>
+            </div>
+            <div class="works-item">
+              <img class="works-image" src="img/works/2.jpg" alt="" />
+              <div class="works-info">
+                <div class="works-title">creatively designed</div>
+                <div class="works-text">Lorem ipsum dolor sit</div>
+              </div>
+            </div>
+          </div>
+          <div class="works-col">
+            <div class="works-item">
+              <img class="works-image" src="img/works/3.jpg" alt="" />
+              <div class="works-info">
+                <div class="works-title">creatively designed</div>
+                <div class="works-text">Lorem ipsum dolor sit</div>
+              </div>
+            </div>
+            <div class="works-item">
+              <img class="works-image" src="img/works/4.jpg" alt="" />
+              <div class="works-info">
+                <div class="works-title">creatively designed</div>
+                <div class="works-text">Lorem ipsum dolor sit</div>
+              </div>
+            </div>
+          </div>
+          <div class="works-col">
+            <div class="works-item">
+              <img class="works-image" src="img/works/5.jpg" alt="" />
+              <div class="works-info">
+                <div class="works-title">creatively designed</div>
+                <div class="works-text">Lorem ipsum dolor sit</div>
+              </div>
+            </div>
+          </div>
+          <div class="works-col">
+            <div class="works-item">
+              <img class="works-image" src="img/works/6.jpg" alt="" />
+              <div class="works-info">
+                <div class="works-title">creatively designed</div>
+                <div class="works-text">Lorem ipsum dolor sit</div>
+              </div>
+            </div>
+            <div class="works-item">
+              <img class="works-image" src="img/works/7.jpg" alt="" />
+              <div class="works-info">
+                <div class="works-title">creatively designed</div>
+                <div class="works-text">Lorem ipsum dolor sit</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- WORKS -->
+      </section>
+
+      <div class="section">
+        <!-- СКОПИРОВАЛИ БЛОК но будет без серого фона поэтому фон убираем серый -->
+        <!-- СЛедующий блок с модификатором gray -->
+        <div class="container">
+          <div class="reviews" data-slider>
+            <div data-slider>
+              <!-- Cлайдер и их стрелки со стилями -->
+              <div>
+                <div class="reviews-item">
+                  <img class="reviews-photo" src="img/avatar.jpg" alt="" />
+                  <div class="reviews-text">
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                  </div>
+                  <div class="reviews-author">Jon Doe</div>
+                </div>
+              </div>
+              <div>
+                <div class="reviews-item">
+                  <img class="reviews-photo" src="img/avatar.jpg" alt="" />
+                  <div class="reviews-text">
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                  </div>
+                  <div class="reviews-author">Jon Doe</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- НОВЫЙ БЛОК НИЖЕ -->
+      <section class="section section--clients">
+        <!-- Новый модификатор section--clients для фона -->
+        <div class="container">
+          <div class="section-header">
+            <!-- (СКОПИРОВАЛИ БЛОК ПОВТОРЯЮЩИЙСЯ) Создали для одинаковых заголовках блок -->
+            <h3 class="section-suptitle">Happy Clients</h3>
+            <h2 class="section-title">What people say</h2>
+          </div>
+          <!-- section-header -->
+
+          <div class="clients">
+            <div class="clients-item">
+              <img class="clients-photo" src="img/PeopleSay/1.jpg" alt="" />
+              <div class="clients-content">
+                <div class="clients-name">Matthew Dix</div>
+                <div class="clients-prof">Graphic Design</div>
+                <div class="clients-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim.
+                </div>
+              </div>
+            </div>
+            <!-- clients-item -->
+
+            <div class="clients-item">
+              <img class="clients-photo" src="img/PeopleSay/3.jpg" alt="" />
+              <div class="clients-content">
+                <div class="clients-name">Nick Karvounis</div>
+                <div class="clients-prof">Graphic Design</div>
+                <div class="clients-text">
+                  Sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                  veniam
+                </div>
+              </div>
+            </div>
+            <!-- clients-item -->
+
+            <div class="clients-item">
+              <img class="clients-photo" src="img/PeopleSay/2.jpg" alt="" />
+              <div class="clients-content">
+                <div class="clients-name">Jaelynn Castillo</div>
+                <div class="clients-prof">Graphic Design</div>
+                <div class="clients-text">
+                  Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam
+                </div>
+              </div>
+            </div>
+            <!-- clients-item -->
+
+            <div class="clients-item">
+              <img class="clients-photo" src="img/PeopleSay/4.jpg" alt="" />
+              <div class="clients-content">
+                <div class="clients-name">Mike Petrucci</div>
+                <div class="clients-prof">Graphic Design</div>
+                <div class="clients-text">
+                  Dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                  minim.
+                </div>
+              </div>
+            </div>
+            <!-- clients-item -->
+          </div>
+          <!-- clients -->
+        </div>
+        <!-- container -->
+      </section>
+
+      <!-- 7 УРОК -->
+
+      <section class="section" id="blog">
+        <div class="container">
+          <div class="section-header">
+            <!-- (СКОПИРОВАЛИ БЛОК ПОВТОРЯЮЩИЙСЯ) Создали для одинаковых заголовках блок -->
+            <h3 class="section-suptitle">Our stories</h3>
+            <h2 class="section-title">Latest blog</h2>
+          </div>
+          <!-- section-header -->
+
+          <div class="blog">
+            <div class="blog-item">
+              <div class="blog-header">
+                <a href="#">
+                  <img class="blog-photo" src="img/blog/1.jpg" alt=""
+                /></a>
+                <div class="blog-date">
+                  <div class="blog-date-day">15</div>
+                  Jan
+                </div>
+                <!-- blog-date -->
+              </div>
+              <!-- blog-header -->
+              <div class="blog-content">
+                <div class="blog-title">
+                  <a href="#">Lorem ipsum dolor sit amet</a>
+                </div>
+                <div class="blog-text">
+                  Consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua.
+                </div>
+              </div>
+              <!-- blog-content -->
+              <div class="blog-footer">
+                <div class="blog-stat">
+                  <span class="blog-stat-item"
+                    ><i class="fa-regular fa-eye"></i>542</span
+                  >
+                  <span class="blog-stat-item"
+                    ><i class="fa-regular fa-comment-dots"></i>17</span
+                  >
+                </div>
+                <!-- blog-stat -->
+              </div>
+              <!-- blog-footer -->
+            </div>
+            <!-- blog-item -->
+
+            <div class="blog-item">
+              <div class="blog-header">
+                <a href="#">
+                  <img class="blog-photo" src="img/blog/2.jpg" alt=""
+                /></a>
+                <div class="blog-date">
+                  <div class="blog-date-day">14</div>
+                  Jan
+                </div>
+                <!-- blog-date -->
+              </div>
+              <!-- blog-header -->
+              <div class="blog-content">
+                <div class="blog-title">
+                  <a href="#">sed do eiusmod tempor</a>
+                </div>
+                <div class="blog-text">
+                  Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.
+                </div>
+              </div>
+              <!-- blog-content -->
+              <div class="blog-footer">
+                <div class="blog-stat">
+                  <span class="blog-stat-item"
+                    ><i class="fa-regular fa-eye"></i>992</span
+                  >
+                  <span class="blog-stat-item"
+                    ><i class="fa-regular fa-comment-dots"></i>42</span
+                  >
+                </div>
+                <!-- blog-stat -->
+              </div>
+              <!-- blog-footer -->
+            </div>
+            <!-- blog-item -->
+
+            <div class="blog-item">
+              <div class="blog-header">
+                <a href="#">
+                  <img class="blog-photo" src="img/blog/3.jpg" alt=""
+                /></a>
+                <div class="blog-date">
+                  <div class="blog-date-day">12</div>
+                  Jan
+                </div>
+                <!-- blog-date -->
+              </div>
+              <!-- blog-header -->
+              <div class="blog-content">
+                <div class="blog-title">
+                  <a href="#">incididunt ut labore et dolore</a>
+                </div>
+                <div class="blog-text">
+                  Elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+                </div>
+              </div>
+              <!-- blog-content -->
+              <div class="blog-footer">
+                <div class="blog-stat">
+                  <span class="blog-stat-item"
+                    ><i class="fa-regular fa-eye"></i>1560</span
+                  >
+                  <span class="blog-stat-item"
+                    ><i class="fa-regular fa-comment-dots"></i>98</span
+                  >
+                </div>
+                <!-- blog-stat -->
+              </div>
+              <!-- blog-footer -->
+            </div>
+            <!-- blog-item -->
+          </div>
+          <!-- blog -->
+        </div>
+        <!-- container -->
+      </section>
+
+      <!-- =================================================================================== -->
+
+      <section class="section section--map">
+        <div class="container">
+          <div class="map">
+            <h2 class="map-title">
+              <div><i class="fa-solid fa-location-dot"></i></div>
+              <!-- чтобы был перенос строки -->
+              <a target="_blank" href="#">Open Map</a>
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================================== -->
+
+      <!-- ПОДВАЛ САЙТА -->
+
+      <footer class="footer" id="footer">
+        <div class="container">
+          <!-- Разбоью футер на 3 колонки -->
+          <div class="footer-inner">
+            <div class="footer-col footer-col--first">
+              <div class="footer-logo">MoGo</div>
+              <div class="footer-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
+              </div>
+
+              <div class="footer-social">
+                <div class="footer-social-header"><b>15k</b> followers</div>
+                <div class="footer-social-content">
+                  Follow Us:
+                  <a target="_blank" href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a target="_blank" href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a target="_blank" href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a target="_blank" href="#">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                  </a>
+                  <a target="_blank" href="#">
+                    <i class="fa-brands fa-google-plus-g"></i>
+                  </a>
+                  <a target="_blank" href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a target="_blank" href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a target="_blank" href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- footer-social -->
+
+              <form class="subscribe" action="/" method="post">
+                <input
+                  class="subscribe-input"
+                  type="email"
+                  name="name"
+                  placeholder="Your Email..."
+                />
+                <button class="subscribe-button" type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+            <!-- footer-col -->
+
+            <div class="footer-col footer-col--second">
+              <div class="footer-title">blogs</div>
+
+              <div class="blogs">
+                <div class="blogs-item">
+                  <img class="blogs-img" src="img/Blogs/1.jpg" alt="" />
+                  <div class="blogs-content">
+                    <a class="blogs-title" href="#"
+                      >Lorem ipsum dolor sit amet, consectetur adipiscing</a
+                    >
+                    <div class="blogs-date">Jan 9, 2016</div>
+                  </div>
+                  <!-- blogs-content -->
+                </div>
+                <!-- blogs-item -->
+
+                <div class="blogs-item">
+                  <img class="blogs-img" src="img/Blogs/2.jpg" alt="" />
+                  <div class="blogs-content">
+                    <a class="blogs-title" href="#"
+                      >Consectetur adipiscing elit, sed do eiusmod tempor</a
+                    >
+                    <div class="blogs-date">Jan 9, 2016</div>
+                  </div>
+                  <!-- blogs-content -->
+                </div>
+                <!-- blogs-item -->
+
+                <div class="blogs-item">
+                  <img class="blogs-img" src="img/Blogs/3.jpg" alt="" />
+                  <div class="blogs-content">
+                    <a class="blogs-title" href="#"
+                      >sed do eiusmod tempor incididunt ut labore</a
+                    >
+                    <div class="blogs-date">Jan 9, 2016</div>
+                  </div>
+                  <!-- blogs-content -->
+                </div>
+                <!-- blogs-item -->
+              </div>
+              <!-- blogs -->
+            </div>
+            <div class="footer-col footer-col--third">
+              <div class="footer-title">instagram</div>
+
+              <div class="instagram">
+                <a class="instagram-item" target="_blank" href="#">
+                  <img src="img/Instagram/1.jpg" alt="" />
+                </a>
+                <a class="instagram-item" target="_blank" href="#">
+                  <img src="img/Instagram/2.jpg" alt="" />
+                </a>
+                <a class="instagram-item" target="_blank" href="#">
+                  <img src="img/Instagram/3.jpg" alt="" />
+                </a>
+                <a class="instagram-item" target="_blank" href="#">
+                  <img src="img/Instagram/4.jpg" alt="" />
+                </a>
+                <a class="instagram-item" target="_blank" href="#">
+                  <img src="img/Instagram/5.jpg" alt="" />
+                </a>
+                <a class="instagram-item" target="_blank" href="#">
+                  <img src="img/Instagram/6.jpg" alt="" />
+                </a>
+                <a class="instagram-item" target="_blank" href="#">
+                  <img src="img/Instagram/7.jpg" alt="" />
+                </a>
+                <a class="instagram-item" target="_blank" href="#">
+                  <img src="img/Instagram/8.jpg" alt="" />
+                </a>
+                <a class="instagram-item" target="_blank" href="#">
+                  <img src="img/Instagram/9.jpg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- footer-inner -->
+        </div>
+
+        <div class="copyright">
+          © 2016 MoGo free PSD template by <span>Laaqiq</span>
+        </div>
+        <!-- container -->
+      </footer>
+    </div>
+    <!-- page для адаптива -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Подключил JQUERY -->
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- Слайдер -->
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
